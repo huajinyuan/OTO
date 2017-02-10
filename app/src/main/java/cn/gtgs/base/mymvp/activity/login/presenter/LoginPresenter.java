@@ -1,10 +1,8 @@
 package cn.gtgs.base.mymvp.activity.login.presenter;
 
 import android.content.Context;
-import android.content.Intent;
 
 import cn.gtgs.base.mymvp.activity.login.view.LoginDelegate;
-import cn.gtgs.base.mymvp.activity.movietest.MovieTestActivity;
 import cn.gtgs.base.mymvp.utils.StringUtils;
 
 /**
@@ -19,15 +17,15 @@ public class LoginPresenter implements ILoginPresenter {
     }
 
     @Override
-    public void login(LoginDelegate delegate) {
-        if (StringUtils.isNotEmpty(delegate.getUserName())&& StringUtils.isNotEmpty(delegate.getPassWord()))
-        {
-            doLogin(delegate.getUserName(),delegate.getPassWord());
+    public void login(LoginDelegate delegate, ILoginListener listener) {
+        if (StringUtils.isEmpty(delegate.getUserName())) {
+            listener.UserNameError();
+            return;
         }
-    }
-    public void doLogin(String account , String pwd)
-    {
-        Intent intent = new Intent(mContext, MovieTestActivity.class);
-        mContext.startActivity(intent);
+        if (StringUtils.isEmpty(delegate.getPassWord())) {
+            listener.PassWordError();
+            return;
+        }
+        listener.LoginSuccess();
     }
 }

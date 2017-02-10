@@ -7,5 +7,5 @@ import cn.gtgs.base.mymvp.activity.login.view.LoginDelegate;
  */
 
 public interface ILoginPresenter {
-    public void login(LoginDelegate delegate);
+    public void login(LoginDelegate delegate ,ILoginListener listener );
 }
