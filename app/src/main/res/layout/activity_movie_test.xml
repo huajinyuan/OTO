@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_movie_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.gtgs.base.mymvp.activity.movietest.MovieTestActivity">
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/nrc_movie_content"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+    <cn.gtgs.base.mymvp.widget.MyRecycle.NRecyclerView
+        android:id="@+id/nrc_movie_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
