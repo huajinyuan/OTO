@@ -4,12 +4,13 @@
     android:id="@+id/activity_movie_test"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.gtgs.base.mymvp.activity.movietest.MovieTestActivity">
+    >
+    <!--tools:context="cn.gtgs.base.mymvp.activity.movietest.MovieTestActivity"-->
     <!--<android.support.v7.widget.RecyclerView-->
     <!--android:id="@+id/nrc_movie_content"-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent"/>-->
-    <cn.gtgs.base.mymvp.widget.MyRecycle.NRecyclerView
+    <cn.gtgs.base.OTO.widget.MyRecycle.NRecyclerView
         android:id="@+id/nrc_movie_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

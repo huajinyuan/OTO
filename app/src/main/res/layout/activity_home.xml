@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="1">
 
     <RelativeLayout
@@ -11,52 +12,53 @@
         android:background="#48a4e0">
 
         <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="8dp"
-            app:srcCompat="@mipmap/icon_home_user"
-            android:id="@+id/imageView3" />
+            app:srcCompat="@mipmap/icon_home_user" />
 
         <TextView
-            android:text="O2O"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:textColor="#FFF"
-            android:id="@+id/textView" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:srcCompat="@mipmap/icon_home_qr"
-            android:layout_alignBottom="@+id/imageView3"
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="55dp"
-            android:id="@+id/imageView4" />
+            android:text="O2O"
+            android:textColor="#FFF" />
 
         <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            app:srcCompat="@mipmap/icon_home_shopcar"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="55dp"
+            app:srcCompat="@mipmap/icon_home_qr" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignBottom="@+id/imageView4"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="8dp"
-            android:layout_marginEnd="8dp"
             android:layout_centerVertical="true"
-            android:id="@+id/imageView5" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@mipmap/icon_home_shopcar" />
     </RelativeLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="187dp"
-        app:srcCompat="@mipmap/icon_home_banner"
-        android:scaleType="fitCenter"
-        android:id="@+id/imageView6" />
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView6"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="187dp"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--app:srcCompat="@mipmap/icon_home_banner" />-->
 
-    <cn.gtgs.base.mymvp.widget.MyRecycle.NRecyclerView
+    <cn.gtgs.base.OTO.widget.MyRecycle.NRecyclerView
+        android:id="@+id/nrc_home_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
