@@ -3,25 +3,27 @@
     package="cn.gtgs.base.OTO">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="cn.gtgs.base.OTO.activity.login.LoginActivity">
+        <activity android:name=".activity.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity android:name=".activity.movietest.MovieTestActivity" />-->
-        <activity android:name="cn.gtgs.base.OTO.activity.login.RegisterActivity" />
-        <activity android:name="cn.gtgs.base.OTO.activity.home.HomeActivity"></activity>
+        <activity android:name=".activity.login.RegisterActivity" />
+        <activity android:name=".activity.home.HomeActivity" />
+        <activity android:name=".activity.center.CenterActivity" />
+        <activity android:name=".activity.ShopCar.ShoppingCarActivity" />
     </application>
 
 </manifest>

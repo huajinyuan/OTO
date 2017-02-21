@@ -1,0 +1,72 @@
+package cn.gtgs.base.OTO.activity.login;
+
+import android.content.Intent;
+import android.view.View;
+
+import butterknife.OnClick;
+import cn.gtgs.base.OTO.R;
+import cn.gtgs.base.OTO.activity.home.HomeActivity;
+import cn.gtgs.base.OTO.activity.login.presenter.ILoginListener;
+import cn.gtgs.base.OTO.activity.login.presenter.ILoginPresenter;
+import cn.gtgs.base.OTO.activity.login.presenter.LoginPresenter;
+import cn.gtgs.base.OTO.activity.login.presenter.Student2MainBinder;
+import cn.gtgs.base.OTO.activity.login.view.LoginDelegate;
+import cn.gtgs.base.OTO.base.presenter.databind.DataBindActivity;
+import cn.gtgs.base.OTO.base.presenter.databind.DataBinder;
+import cn.gtgs.base.OTO.utils.ToastUtil;
+
+public class LoginActivity extends DataBindActivity<LoginDelegate> implements ILoginListener {
+    ILoginPresenter mLoginPresenter;
+
+    @Override
+    protected Class<LoginDelegate> getDelegateClass() {
+        return LoginDelegate.class;
+    }
+
+    @OnClick({R.id.btn_login_admin, R.id.tv_login_go2register})
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_login_admin:
+                mLoginPresenter.login(viewDelegate, this);
+                break;
+            case R.id.tv_login_go2register:
+                Intent intent = new Intent(this, RegisterActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
+    @Override
+    protected void onInitPresenters() {
+        mLoginPresenter = new LoginPresenter();
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public DataBinder getDataBinder() {
+        return new Student2MainBinder();
+    }
+
+    @Override
+    public void UserNameError() {
+        ToastUtil.showToast("UserNameError", this);
+    }
+
+    @Override
+    public void PassWordError() {
+        ToastUtil.showToast("PassWordError", this);
+    }
+
+    @Override
+    public void LoginSuccess() {
+        ToastUtil.showToast("LoginSuccess", this);
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+
+    }
+
+}

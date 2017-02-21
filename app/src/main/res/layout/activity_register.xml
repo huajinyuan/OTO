@@ -1,121 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#48a4e0">
+        android:background="@color/colorBlue">
+
         <ImageView
+            android:id="@+id/img_register_back"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:srcCompat="@mipmap/icon_coment_back"
             android:padding="8dp"
-            android:id="@+id/img_register_back" />
+            app:srcCompat="@mipmap/icon_coment_back" />
 
         <TextView
-            android:text="Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:textColor="#FFF"
-            />
+            android:layout_centerVertical="true"
+            android:text="Register"
+            android:textColor="#FFF" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
         android:orientation="vertical"
-        >
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
         <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:orientation="horizontal"
-     android:layout_marginTop="20dp"
-     >
-     <TextView
-         android:text="User name"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         />
-     <TextView
-         android:text="(Engilish letter/number/Underline)"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:textColor="#ff0000"
-         android:id="@+id/tv_register_tip" />
- </LinearLayout>
-
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User name" />
+
+            <TextView
+                android:id="@+id/tv_register_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Engilish letter/number/Underline)"
+                android:textColor="#ff0000" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_register_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Example:Abc_123"
-            android:ems="10"
-            android:id="@+id/edt_register_userName" />
+            android:inputType="textPersonName" />
 
         <TextView
-            android:text="Password"
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3" />
+            android:text="Password" />
 
         <EditText
+            android:id="@+id/edt_register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:ems="10"
             android:hint="******"
-            android:id="@+id/edt_register_password" />
+            android:inputType="textPassword" />
 
         <TextView
-            android:text="Enter again new password"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6" />
+            android:text="Enter again new password" />
 
         <EditText
+            android:id="@+id/edt_register_password2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:ems="10"
             android:hint="******"
-            android:id="@+id/edt_register_password2" />
+            android:inputType="textPassword" />
 
         <Button
+            android:id="@+id/btn_register_admin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@mipmap/icon_longin_loginbtn"
-            android:id="@+id/btn_register_admin" />
+            android:background="@mipmap/icon_longin_loginbtn" />
 
         <TextView
-            android:text="Account already"
+            android:id="@+id/tv_register_account_already"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:textSize="18sp"
+            android:text="Account already"
             android:textColor="#47a3df"
-            android:id="@+id/tv_register_account_already" />
+            android:textSize="18sp" />
 
         <TextView
-            android:text="Login with Facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            />
+            android:text="Login with Facebook" />
 
         <Button
+            android:id="@+id/btn_register_facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@mipmap/icon_facebook_btn"
-            android:id="@+id/btn_register_facebook" />
+            android:background="@mipmap/icon_facebook_btn" />
 
 
     </LinearLayout>

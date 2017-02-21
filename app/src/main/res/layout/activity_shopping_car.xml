@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shopping_car"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbg"
+    tools:context="cn.gtgs.base.OTO.activity.ShopCar.ShoppingCarActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_shoppingcar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue">
+
+        <ImageView
+            android:id="@+id/img_shoppingcar_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            app:srcCompat="@mipmap/icon_coment_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Shopping Car"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/tv_shoppingcar_allchoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:text="ALL"
+            android:textColor="@color/colorwhite"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <cn.gtgs.base.OTO.widget.MyRecycle.NRecyclerView
+        android:id="@+id/nrec_shopping_car_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorbg"
+        android:layout_above="@+id/lin_shoppingcar_bottom"
+        android:layout_below="@+id/rel_shoppingcar_top" />
+
+    <LinearLayout
+        android:id="@+id/lin_shoppingcar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:background="@color/colorwhite"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/tv_shoppingcar_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/tv_shopping_car_totalfree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="$ 41"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_shopping_car_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBlue"
+            android:text="Submit"
+            android:textColor="@color/colorwhite" />
+    </LinearLayout>
+
+
+</RelativeLayout>
