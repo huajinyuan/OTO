@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_creat_address"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.gtgs.base.OTO.activity.Address.CreatAddressActivity">
+
+    <include
+        android:id="@+id/lalyout_create_address_top"
+        layout="@layout/layout_com_topbar" />
+
+    <Button
+        android:id="@+id/btn_create_address_save"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:background="@color/colorBlue"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/colorwhite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_create_address_save"
+        android:layout_below="@+id/lalyout_create_address_top"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textColor="@color/color_text_gray_80"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_create_address_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Enter your First Name"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingLeft="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Last Name"
+            android:textColor="@color/color_text_gray_80"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_create_address_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Enter your Last Name"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingLeft="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Phone Number"
+            android:textColor="@color/color_text_gray_80"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_create_address_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Enter your phone number"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingLeft="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Country"
+            android:textColor="@color/color_text_gray_80"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_create_address_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Enter your country"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingLeft="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Province / State"
+            android:textColor="@color/color_text_gray_80"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_create_address_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Enter your state"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingLeft="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Detailed Address"
+            android:textColor="@color/color_text_gray_80"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_create_address_detail_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:hint="Please fill in the information about your city and street so that we can deliver the goods to you more quickly and accuratey"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:paddingLeft="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/divider" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -106,8 +106,8 @@ public abstract class BaseLayout extends LinearLayout
      */
     protected boolean isPullLoadEnable = true;
 
-    protected  int backgroundColor = Color.parseColor("#F0EFEF");
-    protected  int contentViewColor = Color.WHITE;
+    protected  int backgroundColor = Color.parseColor("#F1F1F1");
+    protected  int contentViewColor =Color.parseColor("#F1F1F1");
 
     protected BaseRefreshView refreshView;
     protected BaseLoaderView loaderView;

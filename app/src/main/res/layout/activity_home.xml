@@ -9,13 +9,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#48a4e0">
+        android:background="@color/colorBlue">
 
         <ImageView
             android:id="@+id/img_home_center"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="8dp"
+            android:padding="8dp"
             app:srcCompat="@mipmap/icon_home_user" />
 
         <TextView
@@ -28,25 +29,26 @@
             android:textColor="#FFF" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/img_home_qr_action"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_alignBottom="@+id/imageView3"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:padding="8dp"
             android:layout_marginRight="55dp"
-            app:srcCompat="@mipmap/icon_home_qr" />
+            app:srcCompat="@mipmap/sm_icon44" />
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignBottom="@+id/imageView4"
+            android:padding="8dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            app:srcCompat="@mipmap/icon_home_shopcar" />
+            app:srcCompat="@mipmap/gwc_icon44" />
     </RelativeLayout>
 
     <!--<ImageView-->

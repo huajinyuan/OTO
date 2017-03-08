@@ -3,71 +3,84 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
-    android:orientation="horizontal">
+    android:background="@color/colorwhite">
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        />
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.v7.widget.CardView
+        android:id="@+id/load_image_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:contentPadding="2dp">
 
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            app:srcCompat="@mipmap/icon_icon_demo" />
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:padding="10dp"
-            >
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/che_layout_item_shopping_car_choose"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="name" />
-
+                android:layout_marginLeft="20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:paddingRight="10dp"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="$ 9.00"
-                    android:textColor="@color/colorAccent" />
+                <ImageView
+                    android:id="@+id/img_layout_item_shopping_car_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@mipmap/icon_icon_demo" />
 
-                <cn.gtgs.base.OTO.widget.AmountView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center" />
+                    android:layout_height="80dp"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_layout_item_shopping_car_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="name" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_layout_item_shopping_car_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="$ 9.00"
+                            android:textColor="@color/colorAccent" />
+
+                        <cn.gtgs.base.OTO.widget.AmountView
+                            android:id="@+id/amount_layout_item_shopping_car_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
 
             </LinearLayout>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
+

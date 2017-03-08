@@ -7,5 +7,5 @@ import cn.gtgs.base.OTO.activity.home.view.HomeDelegate;
  */
 
 public interface IHomePresenter {
-    void initData(HomeDelegate delegate);
+    void initData(HomeDelegate delegate, IHomeListener listener);
 }

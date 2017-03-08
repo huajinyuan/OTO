@@ -16,6 +16,7 @@
 package cn.gtgs.base.OTO.base.presenter;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -23,6 +24,7 @@ import android.view.Menu;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import cn.gtgs.base.OTO.base.view.IDelegate;
+import cn.gtgs.base.OTO.utils.ACache;
 
 
 /**
@@ -34,6 +36,8 @@ import cn.gtgs.base.OTO.base.view.IDelegate;
 public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatActivity {
     protected T viewDelegate;
     private Unbinder unbinder;
+    public Handler mHandler = new Handler();
+    public ACache mACache;
 
     public ActivityPresenter() {
         try {
@@ -53,6 +57,7 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
         initToolbar();
         unbinder = ButterKnife.bind(this);
         viewDelegate.initWidget();
+        mACache = ACache.get(this);
         onInitPresenters();
         initData();
     }
@@ -103,7 +108,6 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
         viewDelegate.unBunderButterknife();
         viewDelegate = null;
         unbinder.unbind();
-
     }
 
     protected abstract Class<T> getDelegateClass();

@@ -12,7 +12,7 @@
             android:text="广告位"
             android:textSize="18sp"
             android:gravity="center"
-            android:background="#598549"
+            android:background="@color/colorBlue"
             />
     </LinearLayout>
 

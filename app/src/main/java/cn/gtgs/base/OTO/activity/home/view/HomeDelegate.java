@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import cn.gtgs.base.OTO.R;
+import cn.gtgs.base.OTO.activity.home.model.ProductGoods;
 import cn.gtgs.base.OTO.base.view.AppDelegate;
 import cn.gtgs.base.OTO.widget.MyRecycle.NRecyclerView;
 
@@ -20,14 +21,14 @@ public class HomeDelegate extends AppDelegate {
     @BindView(R.id.nrc_home_content)
     NRecyclerView mNrecylerView;
     HomeAdatper adatper;
-    ArrayList<String> mDatas = new ArrayList<>();
+    ArrayList<ProductGoods> mDatas = new ArrayList<>();
 
     @Override
     public int getRootLayoutId() {
         return R.layout.activity_home;
     }
 
-    public void setData(ArrayList<String> data) {
+    public void setData(ArrayList<ProductGoods> data) {
         mDatas.clear();
         mDatas.addAll(data);
         adatper = new HomeAdatper(mDatas);

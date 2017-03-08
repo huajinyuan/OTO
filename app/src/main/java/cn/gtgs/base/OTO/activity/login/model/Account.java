@@ -1,12 +1,14 @@
 package cn.gtgs.base.OTO.activity.login.model;
 
+import java.io.Serializable;
+
 import cn.gtgs.base.OTO.base.model.BaseError;
 
 /**
  * Created by gtgs on 2017/2/17.
  */
 
-public class Account extends BaseError{
+public class Account extends BaseError implements Serializable {
     private String token;
     private String user_email;
     private String user_nicename;

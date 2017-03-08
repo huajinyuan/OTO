@@ -4,16 +4,16 @@ package cn.gtgs.base.OTO.base.model;
  * Created by gtgs on 2017/2/17.
  */
 
-public class BaseError implements IModel{
-    private String code;
+public class BaseError implements IModel {
+    private int code;
     private String message;
     private String data;
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
@@ -40,5 +40,11 @@ public class BaseError implements IModel{
                 ", message='" + message + '\'' +
                 ", data='" + data + '\'' +
                 '}';
+    }
+
+    public void setError(int code, String message, String data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
     }
 }

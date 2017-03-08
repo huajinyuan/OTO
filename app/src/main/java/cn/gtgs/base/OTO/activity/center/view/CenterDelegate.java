@@ -21,11 +21,17 @@ public class CenterDelegate extends AppDelegate {
     @BindView(R.id.tv_center_phone)
     TextView mTvPhone;
 
-
     @Override
     public int getRootLayoutId() {
         return R.layout.activity_center;
     }
 
+    public void setName(String userName) {
+        mTvName.setText(userName);
+    }
+
+    public void setPhone(String phone) {
+        mTvPhone.setText(phone);
+    }
 
 }

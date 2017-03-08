@@ -6,6 +6,7 @@ import android.view.View;
 import butterknife.OnClick;
 import cn.gtgs.base.OTO.R;
 import cn.gtgs.base.OTO.activity.home.HomeActivity;
+import cn.gtgs.base.OTO.activity.login.model.Account;
 import cn.gtgs.base.OTO.activity.login.presenter.ILoginListener;
 import cn.gtgs.base.OTO.activity.login.presenter.ILoginPresenter;
 import cn.gtgs.base.OTO.activity.login.presenter.LoginPresenter;
@@ -13,6 +14,7 @@ import cn.gtgs.base.OTO.activity.login.presenter.Student2MainBinder;
 import cn.gtgs.base.OTO.activity.login.view.LoginDelegate;
 import cn.gtgs.base.OTO.base.presenter.databind.DataBindActivity;
 import cn.gtgs.base.OTO.base.presenter.databind.DataBinder;
+import cn.gtgs.base.OTO.utils.ACacheKey;
 import cn.gtgs.base.OTO.utils.ToastUtil;
 
 public class LoginActivity extends DataBindActivity<LoginDelegate> implements ILoginListener {
@@ -44,6 +46,12 @@ public class LoginActivity extends DataBindActivity<LoginDelegate> implements IL
     @Override
     protected void initData() {
 
+        Account account = (Account) mACache.getAsObject(ACacheKey.CURRENT_ACCOUNT);
+        if (null != account) {
+            this.finish();
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -62,11 +70,18 @@ public class LoginActivity extends DataBindActivity<LoginDelegate> implements IL
     }
 
     @Override
-    public void LoginSuccess() {
+    public void LoginSuccess(Account account) {
         ToastUtil.showToast("LoginSuccess", this);
+        mACache.put(ACacheKey.CURRENT_ACCOUNT, account);
+        this.finish();
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
 
+    }
+
+    @Override
+    public void LoginFailed(String msg) {
+        ToastUtil.showToast(msg, this);
     }
 
 }

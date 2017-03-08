@@ -8,4 +8,7 @@ import cn.gtgs.base.OTO.activity.ShopCar.view.ShoppingDelegate;
 
 public interface IShoppingCarPresenter {
     void initData(ShoppingDelegate delegate);
+
+    void CreateOrder(ShoppingDelegate delegate);
+
 }

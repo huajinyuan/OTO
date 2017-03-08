@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="cn.gtgs.base.OTO">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
+        android:name=".OApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
         <activity android:name=".activity.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +28,14 @@
         <activity android:name=".activity.home.HomeActivity" />
         <activity android:name=".activity.center.CenterActivity" />
         <activity android:name=".activity.ShopCar.ShoppingCarActivity" />
+        <activity android:name=".activity.Information.InformationActivity" />
+        <activity android:name=".activity.Information.ModifyInformationActivity" />
+        <activity android:name=".activity.Address.AddressManageActivity" />
+        <activity android:name=".activity.orders.OrdersActivity" />
+        <activity android:name=".activity.buy.BuyNowInfoActivity" />
+        <activity android:name=".activity.home.QrCodeActivity" />
+        <activity android:name=".activity.Address.CreatAddressActivity" />
+        <activity android:name=".activity.home.ProductInfoActivity"></activity>
     </application>
 
 </manifest>

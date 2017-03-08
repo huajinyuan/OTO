@@ -14,7 +14,7 @@
             android:id="@+id/img_register_back"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:padding="8dp"
+            android:padding="15dp"
             app:srcCompat="@mipmap/icon_coment_back" />
 
         <TextView
@@ -91,8 +91,12 @@
         <Button
             android:id="@+id/btn_register_admin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@mipmap/icon_longin_loginbtn" />
+            android:layout_height="40dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/colorBlue"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/colorwhite" />
 
         <TextView
             android:id="@+id/tv_register_account_already"
@@ -110,12 +114,32 @@
             android:layout_marginTop="20dp"
             android:text="Login with Facebook" />
 
-        <Button
-            android:id="@+id/btn_register_facebook"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:background="@mipmap/icon_facebook_btn" />
+            android:background="#3B5998"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/facebook_icon44" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN WHITH FACEBOOK"
+                android:textColor="@color/colorwhite" />
+        </LinearLayout>
+        <!--<Button-->
+        <!--android:id="@+id/btn_register_facebook"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:background="@mipmap/icon_facebook_btn" />-->
 
 
     </LinearLayout>

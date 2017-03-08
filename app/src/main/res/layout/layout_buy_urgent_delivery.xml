@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Urgent Delivery"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_tip_sp_18" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rec_f1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/checkbox_buy_delivery_choose"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_buy_delivery_tip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whether you want to choose expedited delivery" />
+
+            <TextView
+                android:id="@+id/tv_buy_delivery_tip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Choose expedited delivery to pay $5."
+                android:textColor="@color/colorred" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkbox_buy_delivery_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</LinearLayout>

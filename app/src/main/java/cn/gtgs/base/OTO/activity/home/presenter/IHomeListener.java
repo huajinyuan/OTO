@@ -5,9 +5,8 @@ package cn.gtgs.base.OTO.activity.home.presenter;
  */
 
 public interface IHomeListener {
-    void UserNameError();
 
-    void PassWordError();
+    void RequstSuccess();
 
-    void LoginSuccess();
+    void RequstFailed(String msg);
 }
